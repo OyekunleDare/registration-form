@@ -1,5 +1,5 @@
 ## DESCRIPTION
-The project is used to manage the registration, login, reset password for users. The database used is a spreadsheet (.csv) file and not a myqsl, mysqli or any other available database
+The project can be used to manage the registration, login, reset password for users. The database used is a spreadsheet (.csv) file and not a myqsl, mysqli or any other available database
 - The repository has the following
 - index.php which is the landing page having links to register and sign in
 - dashboard.php is the landing page after successful login
