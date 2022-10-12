@@ -23,6 +23,9 @@ function loginUser($email, $password){
 		if($emails==$email && $passwords==$password){
 			$success = true;
 			break;
+		}else{
+			$success = false;
+			break;
 		}
 	}
 	fclose($open);
@@ -31,6 +34,7 @@ function loginUser($email, $password){
 		$_SESSION['user'] = $name;
 		header("location:../dashboard.php");
 	}else{
+		echo "Wrong username/password";
 		header("location:../html/login.html");
 	}
 	
