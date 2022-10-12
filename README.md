@@ -4,12 +4,12 @@ The project can be used to manage the registration, login, reset password for us
 - index.php which is the landing page having links to register and sign in
 - dashboard.php is the landing page after successful login
 - DIR(FOLDER): assets/style.css
-    - contains simple page style #<b>DO NOT EDIT</b>
-- DIR(FOLDER): html> #<b>DO NOT EDIT</b>
+    - contains simple page style
+- DIR(FOLDER): html>
   - Login.html which is the login page whose form actions is php/login.php
   - Register.html which is register page whose form action is php/register.php
   - Resetpassword.html which is the reset password page whose form action is php/reset.php
-- DIR(FOLDER): php> #<b>WORK IN THIS FOLDER</b>
+- DIR(FOLDER): php>
   - login.php which is the file meant to handle user login (and create user session)
   - register.php which is meant to handle user registration
   - reset.php which is meant to reset user password
