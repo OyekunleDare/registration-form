@@ -1,8 +1,9 @@
-<!DOCTYPE html>
 <?php 
-session_start()
-
+session_start();
+if(isset($_SESSION['user'])){
+    $user = $_SESSION['user'];
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,8 +30,13 @@ session_start()
   </div>
 </nav>
 <div class="container justify-content-center">
-     <h1 class="">Welcome to Zuri Authentication <?php if(isset($_SESSION['user'])){ echo $_SESSION['user']; }?></h1>
+     <h1 class="">Welcome to Zuri Authentication <?php echo $user; ?></h1>
 </div>
    
 </body>
 </html>
+<?php
+}else{
+  header("location:html/login.html");
+}
+?>
