@@ -1,10 +1,8 @@
 <?php
-
-function logout(){
+logout();
+function logout(){   
    session_start();
+   session_destroy();
+   header("location:../html/login.html");
 
-session_destroy();
-
-header("location:../html/login.html");
 }
-
