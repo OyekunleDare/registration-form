@@ -25,7 +25,6 @@ function loginUser($email, $password){
 			break;
 		}else{
 			$success = false;
-			break;
 		}
 	}
 	fclose($open);
