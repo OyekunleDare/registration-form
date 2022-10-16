@@ -9,10 +9,7 @@ loginUser($username, $password);
 }
 
 function loginUser($email, $password){
-    /*
-        Finish this function to check if username and password 
-    from file match that which is passed from the form
-    */
+    
 	$file = "../storage/users.csv";
 	$open = fopen($file,"r");
 	while(($filename = fgetcsv($open))!==false){		
