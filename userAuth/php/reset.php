@@ -6,9 +6,7 @@ if(isset($_POST['submit'])){
     resetPassword($email, $newpassword);
 }
 
-function resetPassword($email, $password){
-    //open file and check if the username exist inside
-    //if it does, replace the password
+function resetPassword($email, $password){	
 	$file = "../storage/users.csv";
 	$temp = "../storage/temp.csv";
 	$filename = fopen($file,"r");
@@ -31,11 +29,8 @@ function resetPassword($email, $password){
 				<p align="center">Please <a href="../html/resetpassword.html">click here</a> to proceed to the reset password page</p>
 			<?php
 				unlink('../storage/temp.csv');
-		}
-		
+		}		
 	}
 	fclose($filename);
-	fclose($write);
-	
-	
+	fclose($write);	
 }
