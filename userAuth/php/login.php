@@ -9,7 +9,6 @@ loginUser($username, $password);
 }
 
 function loginUser($email, $password){
-    
 	$file = "../storage/users.csv";
 	$open = fopen($file,"r");
 	while(($filename = fgetcsv($open))!==false){		
@@ -27,14 +26,12 @@ function loginUser($email, $password){
 	fclose($open);
 	
 	if($success){
+		$_SESSION['username'] = $email;
 		$_SESSION['user'] = $name;
-		header("location:../dashboard.php");
+		header("Location:../dashboard.php");
 	}else{
-		echo "Wrong username/password";
-		header("location:../html/login.html");
-	}
-	
-	
+		//echo "Wrong username/password";
+		header("Location:../html/login.html");
+	}	
 }
-
 ?>
