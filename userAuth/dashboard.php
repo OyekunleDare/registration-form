@@ -30,13 +30,13 @@ if(isset($_SESSION['user'])){
   </div>
 </nav>
 <div class="container justify-content-center">
-     <h1 class="">Welcome to Zuri Authentication <?php echo $user; ?></h1>
+     <h1 class="">Welcome to Zuri Authentication <font color="#6AC03B"><?php echo $user; ?></font></h1>
 </div>
    
 </body>
 </html>
 <?php
 }else{
-  header("location:html/login.html");
+  header("location:html/index.php");
 }
 ?>
